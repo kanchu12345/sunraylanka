@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Lanka Sunrays</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&family=Abhaya+Libre:wght@600;800&family=Noto+Sans+Tamil:wght@500;700&display=swap');
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Language Fonts */
+        .font-si {
+            font-family: 'Abhaya Libre', serif;
+            line-height: 1.4;
+        }
+
+        .font-ta {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            line-height: 1.5;
+        }
+
+        /* ADVANCED THEME: Nature & Technology */
+        .bg-nature-gradient {
+            background-color: #f0fdf4;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(84, 91%, 65%, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(142, 70%, 49%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(38, 92%, 50%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(142, 71%, 45%, 0.2) 0px, transparent 50%);
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .glass-card-accent {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(240, 253, 244, 0.6) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(187, 247, 208, 0.5);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card-accent:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(22, 163, 74, 0.25);
+            border-color: #fbbf24;
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            position: relative;
+            font-weight: 700;
+            color: #ecfdf5;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #fbbf24;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Map Container */
+        .map-frame {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 4px solid white;
+        }
+    </style>
+</head>
+
+<body class="bg-nature-gradient text-slate-800 antialiased selection:bg-green-200 selection:text-green-900">
+
+    <nav data-aos="fade-down"
+        class="fixed w-full z-50 transition-all duration-300 bg-[#064e3b]/95 backdrop-blur-md border-b border-green-800/50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                    <img src="images/image_5c1a28.jpeg" alt="Lanka Sunrays" class="h-10 w-auto">
+                </div>
+                <a href="index.html" class="hidden md:block">
+                    <h1 class="text-white font-extrabold text-xl tracking-tight leading-none">LANKA<br><span
+                            class="text-amber-400">SUNRAYS</span></h1>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wide">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="products.html" class="nav-link" data-i18n="nav_prod">Products</a>
+                <a href="contact.html" class="nav-link text-amber-400" data-i18n="nav_contact">Contact Us</a>
+                <a href="about.html" class="nav-link" data-i18n="nav_about">About Us</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <select id="langSwitch"
+                    class="bg-green-900/50 text-white text-xs font-bold py-2 px-3 rounded-lg border border-green-700 outline-none focus:border-amber-400 transition cursor-pointer">
+                    <option value="en">ENG</option>
+                    <option value="si">සිංහල</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+                <a href="tel:0763651199"
+                    class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-xl font-bold hover:shadow-lg hover:from-amber-400 hover:to-amber-500 transition transform active:scale-95 flex items-center gap-2">
+                    <i class="fas fa-phone-volume"></i>
+                    <span class="hidden md:inline">076 365 1199</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-10 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-green-300/20 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-200/20 rounded-full blur-[100px] -z-10"></div>
+
+        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 mb-4" data-aos="fade-up" data-i18n="contact_title">
+            Contact
+            <span class="text-green-600">Us</span>
+        </h1>
+        <p class="text-slate-600 max-w-2xl mx-auto px-6 text-lg" data-aos="fade-up" data-aos-delay="100"
+            data-i18n="contact_subtitle">
+            Ready to switch to solar? Send us a message!
+        </p>
+    </section>
+
+    <section class="py-10 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
+
+            <!-- Contact Info -->
+            <div class="lg:col-span-2 space-y-6" data-aos="fade-right">
+
+                <div class="glass-card-accent p-6 rounded-2xl flex items-center gap-5">
+                    <div
+                        class="bg-amber-100 w-14 h-14 flex items-center justify-center rounded-xl text-amber-600 text-2xl shadow-sm">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-slate-400 text-xs uppercase tracking-wider mb-1" data-i18n="lbl_call">
+                            Call Us</h5>
+                        <a href="tel:0763651199"
+                            class="text-xl font-black text-slate-900 hover:text-green-600 transition">076 365 1199</a>
+                    </div>
+                </div>
+
+                <div class="glass-card-accent p-6 rounded-2xl flex items-center gap-5">
+                    <div
+                        class="bg-green-100 w-14 h-14 flex items-center justify-center rounded-xl text-green-600 text-2xl shadow-sm">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-slate-400 text-xs uppercase tracking-wider mb-1"
+                            data-i18n="lbl_email">Email Us</h5>
+                        <a href="mailto:lankasunrays@gmail.com"
+                            class="text-lg font-bold text-slate-900 hover:text-green-600 transition break-all">lankasunrays@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="glass-card-accent p-6 rounded-2xl flex items-center gap-5">
+                    <div
+                        class="bg-blue-100 w-14 h-14 flex items-center justify-center rounded-xl text-blue-600 text-2xl shadow-sm">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-slate-400 text-xs uppercase tracking-wider mb-1"
+                            data-i18n="lbl_visit">Visit Us</h5>
+                        <p class="text-lg font-bold text-slate-900" data-i18n="address_city">Wattala, Sri Lanka</p>
+                    </div>
+                </div>
+
+                <!-- Green WhatsApp CTA -->
+                <div class="bg-[#25D366] rounded-2xl p-6 text-center text-white shadow-xl transform hover:scale-105 transition duration-300 cursor-pointer"
+                    onclick="window.open('https://wa.me/94763651199', '_blank')">
+                    <h4 class="text-lg font-bold mb-2 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-2xl"></i> <span data-i18n="wa_chat">Chat on WhatsApp</span>
+                    </h4>
+                    <p class="text-green-100 text-sm font-medium">076 365 1199</p>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-3" data-aos="fade-left">
+                <div class="bg-white/80 backdrop-blur-xl p-8 rounded-[2rem] shadow-xl border border-white/50">
+                    <h4 class="text-2xl font-black mb-6 text-slate-900 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-amber-400 rounded-full"></span>
+                        <span data-i18n="form_title">Send a Message</span>
+                    </h4>
+
+                    <form onsubmit="event.preventDefault(); sendWhatsApp();" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-1"
+                                    data-i18n="form_name">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 outline-none transition font-medium"
+                                    required>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-1"
+                                    data-i18n="form_email">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 outline-none transition font-medium"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-500 uppercase ml-1"
+                                data-i18n="form_subject">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 outline-none transition font-medium"
+                                required>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-500 uppercase ml-1"
+                                data-i18n="form_message">Message</label>
+                            <textarea id="message" rows="4"
+                                class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 outline-none transition font-medium"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-amber-500 hover:shadow-lg hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-3 group">
+                            <span data-i18n="form_btn">Send Message</span>
+                            <i class="fas fa-paper-plane group-hover:translate-x-1 transition"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="pb-20 px-6">
+        <div class="max-w-7xl mx-auto" data-aos="fade-up">
+            <h2 class="text-center text-2xl font-bold mb-8 text-slate-900 tracking-tight" data-i18n="loc_title">Find Us
+                on Google Maps</h2>
+            <div class="map-frame h-[450px]">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63365.34586927953!2d79.86650422167969!3d6.974577000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2587cf51f4961%3A0xc34346808799407!2sWattala!5e0!3m2!1sen!2slk!4v1707030000000!5m2!1sen!2slk"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#064e3b] text-white pt-20 pb-10 px-6 mt-10">
+        <div class="max-w-7xl mx-auto border-b border-green-800 pb-12 grid md:grid-cols-2 gap-10">
+            <div>
+                <h2 class="text-3xl font-black mb-6 tracking-tighter">LANKA SUNRAYS</h2>
+                <p class="text-green-100 max-w-sm text-lg mb-6" data-i18n="footer_desc">We help Sri Lankan farmers grow
+                    more by spending less. The #1 Solar Pumping Solution replacing Kerosene engines.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/LankaSunraysFB" target="_blank"
+                        class="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center hover:bg-amber-500 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/94763651199" target="_blank"
+                        class="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center hover:bg-amber-500 hover:text-white transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:text-right">
+                <p class="text-amber-400 font-bold uppercase tracking-widest mb-4" data-i18n="footer_contact">Contact Us
+                </p>
+                <div class="space-y-3">
+                    <a href="https://www.facebook.com/LankaSunraysFB" target="_blank"
+                        class="block text-xl font-bold hover:text-amber-400 transition">
+                        Lanka Sunrays
+                    </a>
+                    <p class="text-2xl font-black">076 365 1199</p>
+                    <p class="text-lg opacity-80" data-i18n="footer_loc">Wattala, Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 text-center text-sm text-green-300 font-bold uppercase tracking-widest"
+            id="credit-container">
+            <span id="infinite-credit">
+                © 2026 Lanka Sunrays | <span data-i18n="credit_design">Designed by</span>
+                <a href="https://www.facebook.com/profile.php?id=100082101311247" target="_blank"
+                    class="text-amber-400 font-black hover:text-white transition">Infinite Design</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
+
+        const translations = {
+            en: {
+                nav_home: "Home", nav_about: "About Us", nav_prod: "Products", nav_contact: "Contact Us",
+                contact_title: "Contact <span class='text-green-600'>Us</span>",
+                contact_subtitle: "Ready to switch to solar? Send us a message!",
+                lbl_call: "Call Us", lbl_email: "Email Us", lbl_visit: "Visit Us",
+                wa_chat: "Chat on WhatsApp", address_city: "Wattala, Sri Lanka",
+                form_title: "Send a Message", form_name: "Name", form_email: "Email", form_subject: "Subject", form_message: "Message", form_btn: "Send Message",
+                loc_title: "Find Us on Google Maps",
+                footer_desc: "We help Sri Lankan farmers grow more by spending less. The #1 Solar Pumping Solution replacing Kerosene engines.",
+                footer_contact: "Contact Us", footer_loc: "Wattala, Sri Lanka",
+                credit_design: "Designed by"
+            },
+            si: {
+                nav_home: "මුල් පිටුව", nav_about: "අපි ගැන", nav_prod: "නිෂ්පාදන", nav_contact: "අමතන්න",
+                contact_title: "අප <span class='text-green-600'>අමතන්න</span>",
+                contact_subtitle: "සූර්ය බලශක්තියට මාරු වීමට සූදානම්ද? අපට පණිවිඩයක් එවන්න!",
+                lbl_call: "අප අමතන්න", lbl_email: "විද්‍යුත් තැපෑල", lbl_visit: "පැමිණෙන්න",
+                wa_chat: "WhatsApp හරහා කතා කරන්න", address_city: "වත්තල, ශ්‍රී ලංකාව",
+                form_title: "පණිවිඩයක් එවන්න", form_name: "නම", form_email: "විද්‍යුත් තැපෑල", form_subject: "විෂය", form_message: "පණිවිඩය", form_btn: "පණිවිඩය යවන්න",
+                loc_title: "ගූගල් සිතියම",
+                footer_desc: "වියදම් අඩු කර අස්වැන්න වැඩි කර ගැනීමට අපි ගොවීන්ට උදව් කරන්නෙමු. භූමිතෙල් පොම්ප සඳහා හොඳම ආදේශකය.",
+                footer_contact: "අප අමතන්න", footer_loc: "වත්තල, ශ්‍රී ලංකාව",
+                credit_design: "නිර්මාණය"
+            },
+            ta: {
+                nav_home: "முகப்பு", nav_about: "எங்களை பற்றி", nav_prod: "தயாரிப்புகள்", nav_contact: "தொடர்பு",
+                contact_title: "தொடர்பு <span class='text-green-600'>கொள்ள</span>",
+                contact_subtitle: "சூரிய சக்திக்கு மாற தயாரா? எங்களை தொடர்பு கொள்ளவும்!",
+                lbl_call: "அழைக்கவும்", lbl_email: "மின்னஞ்சல்", lbl_visit: "முகவரி",
+                wa_chat: "வாட்ஸ்அப்", address_city: "வத்தளை, இலங்கை",
+                form_title: "செய்தி அனுப்புங்கள்", form_name: "பெயர்", form_email: "மின்னஞ்சல்", form_subject: "தலைப்பு", form_message: "செய்தி", form_btn: "அனுப்பு",
+                loc_title: "கூகுள் வரைபடம்",
+                footer_desc: "விவசாயிகள் குறைந்த செலவில் அதிக லாபம் பெற உதவுகிறோம். மண்ணெண்ணெய் பம்புகளுக்கு சிறந்த மாற்று.",
+                footer_contact: "தொடர்பு கொள்ள", footer_loc: "வத்தளை, இலங்கை",
+                credit_design: "வடிவமைப்பு"
+            }
+        };
+
+        const langSwitch = document.getElementById('langSwitch');
+
+        langSwitch.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            document.body.classList.toggle('font-si', lang === 'si');
+            document.body.classList.toggle('font-ta', lang === 'ta');
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        });
+
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const phone = "94763651199";
+
+            if (!name || !email || !message) {
+                alert("Please fill in the required fields.");
+                return;
+            }
+
+            const text = `*New Inquiry via Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+
+        // Infinite Design Credit Protection
+        (function () {
+            setInterval(() => {
+                const container = document.getElementById('credit-container');
+                const restoreHTML = `© 2026 Lanka Sunrays | <span data-i18n="credit_design">Designed by</span> <a href="https://www.facebook.com/profile.php?id=100082101311247" target="_blank" class="text-amber-400 font-black hover:text-white transition">Infinite Design</a>`;
+                if (!container || container.innerText.indexOf('Infinite Design') === -1) {
+                    if (container) {
+                        container.innerHTML = `<span id="infinite-credit">${restoreHTML}</span>`;
+                        // Re-apply current language translation to credit
+                        const currentLang = document.getElementById('langSwitch').value;
+                        const creditSpan = container.querySelector('[data-i18n="credit_design"]');
+                        if (creditSpan && translations[currentLang]['credit_design']) {
+                            creditSpan.innerHTML = translations[currentLang]['credit_design'];
+                        }
+                    }
+                }
+            }, 3000);
+        })();
+    </script>
+</body>
+
+</html>

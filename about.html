@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Lanka Sunrays</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&family=Abhaya+Libre:wght@600;800&family=Noto+Sans+Tamil:wght@500;700&display=swap');
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Language Fonts */
+        .font-si {
+            font-family: 'Abhaya Libre', serif;
+            line-height: 1.4;
+        }
+
+        .font-ta {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            line-height: 1.5;
+        }
+
+        /* ADVANCED THEME: Nature & Technology */
+        .bg-nature-gradient {
+            background-color: #f0fdf4;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(84, 91%, 65%, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(142, 70%, 49%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(38, 92%, 50%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(142, 71%, 45%, 0.2) 0px, transparent 50%);
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            position: relative;
+            font-weight: 700;
+            color: #ecfdf5;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #fbbf24;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-nature-gradient text-slate-800 antialiased selection:bg-green-200 selection:text-green-900">
+
+    <nav data-aos="fade-down"
+        class="fixed w-full z-50 transition-all duration-300 bg-[#064e3b]/95 backdrop-blur-md border-b border-green-800/50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                    <img src="images/image_5c1a28.jpeg" alt="Lanka Sunrays" class="h-10 w-auto">
+                </div>
+                <a href="index.html" class="hidden md:block">
+                    <h1 class="text-white font-extrabold text-xl tracking-tight leading-none">LANKA<br><span
+                            class="text-amber-400">SUNRAYS</span></h1>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wide">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="products.html" class="nav-link" data-i18n="nav_prod">Products</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a>
+                <a href="about.html" class="nav-link text-amber-400" data-i18n="nav_about">About Us</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <select id="langSwitch"
+                    class="bg-green-900/50 text-white text-xs font-bold py-2 px-3 rounded-lg border border-green-700 outline-none focus:border-amber-400 transition cursor-pointer">
+                    <option value="en">ENG</option>
+                    <option value="si">සිංහල</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+                <a href="tel:0763651199"
+                    class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-xl font-bold hover:shadow-lg hover:from-amber-400 hover:to-amber-500 transition transform active:scale-95 flex items-center gap-2">
+                    <i class="fas fa-phone-volume"></i>
+                    <span class="hidden md:inline">076 365 1199</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-green-300/20 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-200/20 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="relative order-2 lg:order-1" data-aos="fade-right">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
+                    <img src="images/cc.png" alt="Sri Lankan Farmer"
+                        class="w-full h-auto object-cover transform hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <p class="font-bold text-lg"><i class="fas fa-leaf text-green-400 mr-2"></i> <span
+                                data-i18n="img_caption">Empowering Agriculture</span></p>
+                    </div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-amber-400/20 rounded-full blur-xl -z-10"></div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-green-600/20 rounded-full blur-xl -z-10"></div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <h1 data-aos="fade-up" class="text-4xl lg:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                    <span class="text-green-700" data-i18n="about_title_1">Who We Are</span> <br>
+                    <span class="text-amber-500" data-i18n="about_title_2">Lanka Sunrays</span>
+                </h1>
+
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="space-y-6 text-lg text-slate-700 font-medium leading-relaxed">
+                    <p data-i18n="about_p1">
+                        Lanka Sunrays is a leading solar water pumping systems integrator handling complete range of
+                        solar powered water pumping systems that including Submersible pumps, Surface mounted Pumps and
+                        Sewerage pumps etc.
+                    </p>
+                    <p data-i18n="about_p2" class="border-l-4 border-amber-400 pl-4">
+                        We provide the most economical water pumping solutions for the farmers to meet with their
+                        irrigation needs at minimal cost.
+                    </p>
+                    <p data-i18n="about_p3">
+                        Our team of experts will handle the complete installation process to make it easy for farmers
+                        and to increase the durability of solar pumps.
+                    </p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="mt-10 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-green-100 shadow-lg">
+                    <h3 class="text-xl font-bold text-green-800 mb-2 flex items-center gap-2">
+                        <i class="fas fa-headset text-amber-500"></i> <span data-i18n="contact_cta_title">Need
+                            help?</span>
+                    </h3>
+                    <p class="text-slate-600 mb-4" data-i18n="contact_cta_text">Please contact us for all your
+                        irrigation needs.</p>
+                    <a href="contact.html"
+                        class="inline-flex items-center gap-2 text-green-700 font-bold hover:text-amber-600 transition">
+                        <span data-i18n="btn_contact">Contact Us</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#064e3b] text-white pt-20 pb-10 px-6 mt-10">
+        <div class="max-w-7xl mx-auto border-b border-green-800 pb-12 grid md:grid-cols-2 gap-10">
+            <div>
+                <h2 class="text-3xl font-black mb-6 tracking-tighter">LANKA SUNRAYS</h2>
+                <p class="text-green-100 max-w-sm text-lg mb-6" data-i18n="footer_desc">We help Sri Lankan farmers grow
+                    more by spending less. The #1 Solar Pumping Solution replacing Kerosene engines.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/LankaSunraysFB" target="_blank"
+                        class="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center hover:bg-amber-500 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/94763651199" target="_blank"
+                        class="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center hover:bg-amber-500 hover:text-white transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:text-right">
+                <p class="text-amber-400 font-bold uppercase tracking-widest mb-4" data-i18n="footer_contact">Contact Us
+                </p>
+                <div class="space-y-3">
+                    <a href="https://www.facebook.com/LankaSunraysFB" target="_blank"
+                        class="block text-xl font-bold hover:text-amber-400 transition">
+                        Lanka Sunrays
+                    </a>
+                    <p class="text-2xl font-black">076 365 1199</p>
+                    <p class="text-lg opacity-80" data-i18n="footer_loc">Wattala, Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 text-center text-sm text-green-300 font-bold uppercase tracking-widest"
+            id="credit-container">
+            <span id="infinite-credit">
+                © 2026 Lanka Sunrays | <span data-i18n="credit_design">Designed by</span>
+                <a href="https://www.facebook.com/profile.php?id=100082101311247" target="_blank"
+                    class="text-amber-400 font-black hover:text-white transition">Infinite Design</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
+
+        const translations = {
+            en: {
+                nav_home: "Home", nav_about: "About Us", nav_prod: "Products", nav_contact: "Contact Us",
+                about_title_1: "Who We Are", about_title_2: "Lanka Sunrays",
+                about_p1: "Lanka Sunrays is a leading solar water pumping systems integrator handling complete range of solar powered water pumping systems that including Submersible pumps, Surface mounted Pumps and Sewerage pumps etc.",
+                about_p2: "We provide the most economical water pumping solutions for the farmers to meet with their irrigation needs at minimal cost.",
+                about_p3: "Our team of experts will handle the complete installation process to make it easy for farmers and to increase the durability of solar pumps.",
+                contact_cta_title: "Need help?", contact_cta_text: "Please contact us for all your irrigation needs.",
+                btn_contact: "Contact Us",
+                img_caption: "Empowering Agriculture",
+                footer_desc: "We help Sri Lankan farmers grow more by spending less. The #1 Solar Pumping Solution replacing Kerosene engines.",
+                footer_contact: "Contact Us", footer_loc: "Wattala, Sri Lanka",
+                credit_design: "Designed by"
+            },
+            si: {
+                nav_home: "මුල් පිටුව", nav_about: "අපි ගැන", nav_prod: "නිෂ්පාදන", nav_contact: "අමතන්න",
+                about_title_1: "අපි කවුද?", about_title_2: "ලංකා සන්රේස්",
+                about_p1: "Lanka Sunrays යනු Submersible පොම්ප, මතුපිට සවි කල පොම්ප (Surface Pumps) සහ මලපවහන පොම්ප (Sewerage Pumps) ඇතුළු පූර්ණ පරාසයක සූර්ය බලශක්ති ජල පොම්ප පද්ධති සපයන ප්‍රමුඛතම ආයතනයකි.",
+                about_p2: "ගොවීන්ගේ වාරිමාර්ග අවශ්‍යතා අවම පිරිවැයකින් සපුරාලීම සඳහා අපි වඩාත් ලාභදායී ජල පොම්ප විසඳුම් ලබා දෙන්නෙමු.",
+                about_p3: "ගොවීන්ට පහසු කිරීම සහ සූර්ය පොම්පවල කල්පැවැත්ම වැඩි කිරීම සඳහා අපගේ විශේෂඥ කණ්ඩායම සම්පූර්ණ ස්ථාපන ක්‍රියාවලිය සිදු කරයි.",
+                contact_cta_title: "උදව් අවශ්‍යද?", contact_cta_text: "ඔබගේ සියලුම වාරිමාර්ග අවශ්‍යතා සඳහා අප අමතන්න.",
+                btn_contact: "අප අමතන්න",
+                img_caption: "කෘෂිකර්මාන්තය සවිබල ගැන්වීම",
+                footer_desc: "වියදම් අඩු කර අස්වැන්න වැඩි කර ගැනීමට අපි ගොවීන්ට උදව් කරන්නෙමු. භූමිතෙල් පොම්ප සඳහා හොඳම ආදේශකය.",
+                footer_contact: "අප අමතන්න", footer_loc: "වත්තල, ශ්‍රී ලංකාව",
+                credit_design: "නිර්මාණය"
+            },
+            ta: {
+                nav_home: "முகப்பு", nav_about: "எங்களை பற்றி", nav_prod: "தயாரிப்புகள்", nav_contact: "தொடர்பு",
+                about_title_1: "நாங்கள் யார்?", about_title_2: "லங்கா சன்ரேஸ்",
+                about_p1: "Lanka Sunrays என்பது Submersible பம்புகள், Surface பம்புகள் மற்றும் Sewerage பம்புகள் உள்ளிட்ட முழுமையான சூரிய சக்தி நீர் இறைக்கும் அமைப்புகளை கையாளும் ஒரு முன்னணி நிறுவனமாகும்.",
+                about_p2: "விவசாயிகளின் நீர்ப்பாசனத் தேவைகளை குறைந்த செலவில் பூர்த்தி செய்ய மிகவும் சிக்கனமான நீர் இறைக்கும் தீர்வுகளை நாங்கள் வழங்குகிறோம்.",
+                about_p3: "விவசாயிகளுக்கு எளிதாக்கவும், சோலார் பம்புகளின் ஆயுளை அதிகரிக்கவும் எங்கள் நிபுணர் குழு முழு நிறுவல் செயல்முறையையும் கையாளும்.",
+                contact_cta_title: "உதவி தேவையா?", contact_cta_text: "உங்கள் அனைத்து நீர்ப்பாசனத் தேவைகளுக்கும் எங்களைத் தொடர்பு கொள்ளுங்கள்.",
+                btn_contact: "தொடர்பு கொள்ள",
+                img_caption: "விவசாயத்தை மேம்படுத்துதல்",
+                footer_desc: "விவசாயிகள் குறைந்த செலவில் அதிக லாபம் பெற உதவுகிறோம். மண்ணெண்ணெய் பம்புகளுக்கு சிறந்த மாற்று.",
+                footer_contact: "தொடர்பு கொள்ள", footer_loc: "வத்தளை, இலங்கை",
+                credit_design: "வடிவமைப்பு"
+            }
+        };
+
+        const langSwitch = document.getElementById('langSwitch');
+
+        langSwitch.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            document.body.classList.toggle('font-si', lang === 'si');
+            document.body.classList.toggle('font-ta', lang === 'ta');
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        });
+
+        // Infinite Design Credit Protection
+        (function () {
+            setInterval(() => {
+                const container = document.getElementById('credit-container');
+                const restoreHTML = `© 2026 Lanka Sunrays | <span data-i18n="credit_design">Designed by</span> <a href="https://www.facebook.com/profile.php?id=100082101311247" target="_blank" class="text-amber-400 font-black hover:text-white transition">Infinite Design</a>`;
+                if (!container || container.innerText.indexOf('Infinite Design') === -1) {
+                    if (container) {
+                        container.innerHTML = `<span id="infinite-credit">${restoreHTML}</span>`;
+                        // Re-apply current language translation to credit
+                        const currentLang = document.getElementById('langSwitch').value;
+                        const creditSpan = container.querySelector('[data-i18n="credit_design"]');
+                        if (creditSpan && translations[currentLang]['credit_design']) {
+                            creditSpan.innerHTML = translations[currentLang]['credit_design'];
+                        }
+                    }
+                }
+            }, 3000);
+        })();
+    </script>
+</body>
+
+</html>
