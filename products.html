@@ -99,7 +99,7 @@
                     <img src="images/image_5c1a28.jpeg" alt="Lanka Sunrays" class="h-10 w-auto">
                 </div>
                 <!-- Link back to index -->
-                <a href="index.html" class="hidden md:block">
+                <a href="index.html" class="block">
                     <h1 class="text-white font-extrabold text-xl tracking-tight leading-none">LANKA<br><span
                             class="text-amber-400">SUNRAYS</span></h1>
                 </a>
@@ -120,9 +120,32 @@
                     <option value="ta">தமிழ்</option>
                 </select>
                 <a href="tel:0763651199"
-                    class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-xl font-bold hover:shadow-lg hover:from-amber-400 hover:to-amber-500 transition transform active:scale-95 flex items-center gap-2">
+                    class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-xl font-bold hover:shadow-lg hover:from-amber-400 hover:to-amber-500 transition transform active:scale-95 items-center gap-2">
                     <i class="fas fa-phone-volume"></i>
                     <span class="hidden md:inline">076 365 1199</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-[#064e3b] border-t border-green-800 absolute top-24 left-0 w-full shadow-xl">
+            <div class="flex flex-col p-6 space-y-4 text-center font-bold text-lg">
+                <a href="index.html" class="text-white hover:text-amber-400 transition" data-i18n="nav_home">Home</a>
+                <a href="products.html" class="text-amber-400 hover:text-amber-300 transition"
+                    data-i18n="nav_prod">Products</a>
+                <a href="contact.html" class="text-white hover:text-amber-400 transition"
+                    data-i18n="nav_contact">Contact Us</a>
+                <a href="about.html" class="text-white hover:text-amber-400 transition" data-i18n="nav_about">About
+                    Us</a>
+                <a href="tel:0763651199"
+                    class="text-white hover:text-amber-400 transition flex justify-center items-center gap-2 sm:hidden">
+                    <i class="fas fa-phone"></i> 076 365 1199
                 </a>
             </div>
         </div>
@@ -144,21 +167,20 @@
 
             <!-- NEW PRODUCT 1 -->
             <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
-                <img src="images/1.jpg" onerror="this.src='https://placehold.co/400x400?text=4+Inch+Pump'"
-                    alt="4 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">4” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
-                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_surface">Surface Pump</span> - TZK 63-14</p>
+                <img src="images/1.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Pump'"
+                    alt="2 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
                 <ul class="text-sm space-y-2 mb-6 text-slate-600">
                     <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 45’ Feet</li>
+                            data-i18n="spec_head">Max Head</span>: 102’ Feet</li>
                     <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 63,000 LPH</li>
+                            data-i18n="spec_flow">Max Flow</span>: 30,000 LPH</li>
                     <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 595w x 4</li>
+                            data-i18n="spec_panels">Solar Panels</span>: 620w x 4</li>
                     <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
+                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
                 </ul>
                 <div class="border-t border-green-100 pt-4 mt-auto">
                     <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 230,000</p>
@@ -169,123 +191,8 @@
             <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
                 <img src="images/2.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+Pump'"
                     alt="3 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">3” <span data-i18n="pump_word">Pump</span> 1.6hp (1200W)</h3>
-                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_surface">Surface Pump</span> - TZK 40-16</p>
-                <ul class="text-sm space-y-2 mb-6 text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 51’ Feet</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 40,000 LPH</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 595w x 3</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
-                </ul>
-                <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 195,000</p>
-                </div>
-            </div>
-
-            <!-- NEW PRODUCT 3 -->
-            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/3.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Submersible'"
-                    alt="2 Inch Submersible" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="type_sub">Submersible</span> 2hp</h3>
-                <p class="text-xs font-bold text-blue-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_sub">Submersible</span> - 4TY8 37/9</p>
-                <ul class="text-sm space-y-2 mb-6 text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 240’ Feet</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 13,000 LPH</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 620w x 4</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
-                </ul>
-                <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 230,000</p>
-                </div>
-            </div>
-
-            <!-- NEW PRODUCT 4 -->
-            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
-                <img src="images/4.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+3hp+Sub'"
-                    alt="2 Inch 3hp Submersible" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="type_sub">Submersible</span> 3hp</h3>
-                <p class="text-xs font-bold text-blue-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_sub">Submersible</span> - 4TY8 57/14</p>
-                <ul class="text-sm space-y-2 mb-6 text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 330’ Feet</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 13,000 LPH</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 620w x 5</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
-                </ul>
-                <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 255,000</p>
-                </div>
-            </div>
-
-            <!-- NEW PRODUCT 5 -->
-            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/5.jpg" onerror="this.src='https://placehold.co/400x400?text=1.25+Inch+Sub'"
-                    alt="1.25 Inch Submersible" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">1 1/4” <span data-i18n="type_sub">Submersible</span> 1hp</h3>
-                <p class="text-xs font-bold text-blue-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_sub">Submersible</span> - 3TY2.5-59/10</p>
-                <ul class="text-sm space-y-2 mb-6 text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 270’ Feet</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 4,000 LPH</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 640w x 2</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-green-700"><span data-i18n="spec_dc">DC power motor</span> (20m Cable)
-                    </li>
-                </ul>
-                <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 160,000</p>
-                </div>
-            </div>
-
-            <!-- EXISTING PRODUCT 6 -->
-            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/6.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+TPN'"
-                    alt="2 Inch TPN" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
-                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">TPN 32-32</p>
-                <ul class="text-sm space-y-2 mb-6 text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 102’ Feet</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 30,000 LPH</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 620w x 4</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
-                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
-                </ul>
-                <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 230,000</p>
-                </div>
-            </div>
-
-            <!-- EXISTING PRODUCT 7 -->
-            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
-                <img src="images/7.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+TPN'"
-                    alt="3 Inch TPN" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
                 <h3 class="text-lg font-bold mb-2">3” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
-                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">TPN 50-21</p>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
                 <ul class="text-sm space-y-2 mb-6 text-slate-600">
                     <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
                             data-i18n="spec_head">Max Head</span>: 67’ Feet</li>
@@ -294,11 +201,121 @@
                     <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
                             data-i18n="spec_panels">Solar Panels</span>: 620w x 4</li>
                     <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
                     <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
                 </ul>
                 <div class="border-t border-green-100 pt-4 mt-auto">
                     <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 240,000</p>
+                </div>
+            </div>
+
+            <!-- NEW PRODUCT 3 -->
+            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/3.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+Pump'"
+                    alt="3 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">3” <span data-i18n="pump_word">Pump</span> 3hp (2200W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
+                <ul class="text-sm space-y-2 mb-6 text-slate-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
+                            data-i18n="spec_head">Max Head</span>: 83’ Feet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
+                            data-i18n="spec_flow">Max Flow</span>: 60,000 LPH</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
+                            data-i18n="spec_panels">Solar Panels</span>: 595w x 6</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
+                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
+                </ul>
+                <div class="border-t border-green-100 pt-4 mt-auto">
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 285,000</p>
+                </div>
+            </div>
+
+            <!-- NEW PRODUCT 4 -->
+            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
+                <img src="images/4.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+Pump'"
+                    alt="3 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">3” <span data-i18n="pump_word">Pump</span> 1.2hp (900W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
+                <ul class="text-sm space-y-2 mb-6 text-slate-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
+                            data-i18n="spec_head">Max Head</span>: 45’ Feet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
+                            data-i18n="spec_flow">Max Flow</span>: 30,000 LPH</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
+                            data-i18n="spec_panels">Solar Panels</span>: 640w x 2</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD & DC MCB</li>
+                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
+                </ul>
+                <div class="border-t border-green-100 pt-4 mt-auto">
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 135,000</p>
+                </div>
+            </div>
+
+            <!-- NEW PRODUCT 5 -->
+            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/5.jpg" onerror="this.src='https://placehold.co/400x400?text=4+Inch+Pump'"
+                    alt="4 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">4” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
+                <ul class="text-sm space-y-2 mb-6 text-slate-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
+                            data-i18n="spec_head">Max Head</span>: 45’ Feet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
+                            data-i18n="spec_flow">Max Flow</span>: 63,000 LPH</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
+                            data-i18n="spec_panels">Solar Panels</span>: 595w x 4</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD & DC MCB</li>
+                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
+                </ul>
+                <div class="border-t border-green-100 pt-4 mt-auto">
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 230,000</p>
+                </div>
+            </div>
+
+            <!-- EXISTING PRODUCT 6 -->
+            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/6.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+Pump'"
+                    alt="3 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">3” <span data-i18n="pump_word">Pump</span> 1.6hp (1200W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
+                <ul class="text-sm space-y-2 mb-6 text-slate-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
+                            data-i18n="spec_head">Max Head</span>: 51’ Feet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
+                            data-i18n="spec_flow">Max Flow</span>: 40,000 LPH</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
+                            data-i18n="spec_panels">Solar Panels</span>: 595w x 3</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD & DC MCB</li>
+                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
+                </ul>
+                <div class="border-t border-green-100 pt-4 mt-auto">
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 195,000</p>
+                </div>
+            </div>
+
+            <!-- EXISTING PRODUCT 7 -->
+            <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
+                <img src="images/7.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Pump'"
+                    alt="2 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="pump_word">Pump</span> 2hp (1500W)</h3>
+                <p class="text-xs font-bold text-amber-600 uppercase mb-4 tracking-wider">Solar Pump</p>
+                <ul class="text-sm space-y-2 mb-6 text-slate-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
+                            data-i18n="spec_head">Max Head</span>: 240’ Feet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
+                            data-i18n="spec_flow">Max Flow</span>: 13,000 LPH</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
+                            data-i18n="spec_panels">Solar Panels</span>: 620w x 4</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC SPD</li>
+                    <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
+                </ul>
+                <div class="border-t border-green-100 pt-4 mt-auto">
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 230,000</p>
                 </div>
             </div>
 
@@ -308,34 +325,34 @@
                 <div
                     class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
                     HEAVY DUTY</div>
-                <img src="images/8.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+3hp+TPN'"
-                    alt="3 Inch 3hp TPN" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2 text-amber-600">3” <span data-i18n="pump_word">Pump</span> 3hp (2200W)
+                <img src="images/8.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Pump'"
+                    alt="2 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2 text-amber-600">2” <span data-i18n="pump_word">Pump</span> 3hp (2200W)
                 </h3>
-                <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-wider">TPN 60-26</p>
+                <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-wider">Solar Pump</p>
                 <ul class="text-sm space-y-2 mb-6 text-slate-600">
                     <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 83’ Feet</li>
+                            data-i18n="spec_head">Max Head</span>: 330’ Feet</li>
                     <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 60,000 LPH</li>
+                            data-i18n="spec_flow">Max Flow</span>: 13,000 LPH</li>
                     <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
-                            data-i18n="spec_panels">Solar Panels</span>: 595w x 6</li>
+                            data-i18n="spec_panels">Solar Panels</span>: 620w x 5</li>
                     <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
-                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB</li>
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
                     <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
                 </ul>
                 <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 285,000</p>
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 255,000</p>
                 </div>
             </div>
 
             <!-- EXISTING PRODUCT 9 -->
             <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/9.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Deep+Well'"
-                    alt="2 Inch Deep Well" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">2” Deep Well 3hp</h3>
+                <img src="images/9.jpg" onerror="this.src='https://placehold.co/400x400?text=2+Inch+Pump'"
+                    alt="2 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">2” <span data-i18n="pump_word">Pump</span> 3hp (2200W)</h3>
                 <p class="text-xs font-bold text-blue-600 uppercase mb-4 tracking-wider"><span
-                        data-i18n="type_sub">Submersible</span> - 4TY3 120/175SP</p>
+                        data-i18n="type_sub">Submersible</span></p>
                 <ul class="text-sm space-y-2 mb-6 text-slate-600">
                     <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
                             data-i18n="spec_head">Max Head</span>: 512’ Feet</li>
@@ -343,6 +360,8 @@
                             data-i18n="spec_flow">Max Flow</span>: 5,000 LPH</li>
                     <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
                             data-i18n="spec_panels">Solar Panels</span>: 620w x 5</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
                     <li class="font-bold text-amber-600" data-i18n="spec_hybrid">Hybrid AC/DC Auto power</li>
                 </ul>
                 <div class="border-t border-green-100 pt-4 mt-auto">
@@ -352,21 +371,23 @@
 
             <!-- EXISTING PRODUCT 10 -->
             <div class="glass-card-accent p-6 rounded-3xl" data-aos="fade-up">
-                <img src="images/10.jpg" onerror="this.src='https://placehold.co/400x400?text=3+Inch+Starter'"
-                    alt="3 Inch Starter" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
-                <h3 class="text-lg font-bold mb-2">3” Starter 1.2hp (900W)</h3>
-                <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-wider">TP 30 S 900</p>
+                <img src="images/10.jpg" onerror="this.src='https://placehold.co/400x400?text=1.25+Inch+Pump'"
+                    alt="1.25 Inch Pump" class="w-full h-48 object-contain mb-6 rounded-xl bg-white/50">
+                <h3 class="text-lg font-bold mb-2">1 1/4” <span data-i18n="pump_word">Pump</span> 1hp (750W)</h3>
+                <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-wider">Solar Pump</p>
                 <ul class="text-sm space-y-2 mb-6 text-slate-600">
                     <li class="flex items-center gap-2"><i class="fas fa-ruler-vertical text-green-600"></i> <span
-                            data-i18n="spec_head">Max Head</span>: 45’ Feet</li>
+                            data-i18n="spec_head">Max Head</span>: 270’ Feet</li>
                     <li class="flex items-center gap-2"><i class="fas fa-water text-blue-500"></i> <span
-                            data-i18n="spec_flow">Max Flow</span>: 30,000 LPH</li>
+                            data-i18n="spec_flow">Max Flow</span>: 4000 LPH</li>
                     <li class="flex items-center gap-2"><i class="fas fa-solar-panel text-amber-500"></i> <span
                             data-i18n="spec_panels">Solar Panels</span>: 640w x 2</li>
-                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-box text-slate-400"></i> <span
+                            data-i18n="spec_box">IP65 Box</span>: SPD, DC MCB & AC MCB</li>
+                    <li class="font-bold text-green-700" data-i18n="spec_dc">DC power motor (20m Cable)</li>
                 </ul>
                 <div class="border-t border-green-100 pt-4 mt-auto">
-                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 135,000</p>
+                    <p class="text-2xl font-black text-slate-900"><span data-i18n="curr_rs">Rs.</span> 160,000</p>
                 </div>
             </div>
 
@@ -461,6 +482,16 @@
         };
 
         const langSwitch = document.getElementById('langSwitch');
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
         langSwitch.addEventListener('change', (e) => {
             const lang = e.target.value;
